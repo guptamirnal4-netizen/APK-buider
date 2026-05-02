@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-bgsoft text-body antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.app-shell {
+  max-width: 480px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  box-shadow: 0 0 32px rgba(0,0,0,0.05);
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+/* Remove default Vite App.css styles */
